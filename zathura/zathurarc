@@ -1,0 +1,7 @@
+set recolor true
+set recolor-lightcolor "#222222"
+# set recolor-darkcolor "#FFFFFF"
+
+
+
+map <C-i> recolor
