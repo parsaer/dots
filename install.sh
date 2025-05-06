@@ -9,45 +9,43 @@ mkdir -p "$BACKUP_DIR"
 
 link_file() {
     src="$DOTFILES_DIR/$1"
-    dest="$HOME/$1"
+    dest="$HOME/$2"
 
     # Ensure parent directory exists
     mkdir -p "$(dirname "$dest")"
 
-    # Backup existing files
+    # Backup files
     if [ -e "$dest" ] && [ ! -L "$dest" ]; then
         echo "  Backing up $dest to $BACKUP_DIR"
         mv "$dest" "$BACKUP_DIR/"
     fi
 
-    # Ensure source file exists and is not empty
+    # Ensure source file exists
     if [ ! -e "$src" ] || [ ! -s "$src" ]; then
         echo "  ERROR: $src does not exist or is empty! Skipping."
         return
     fi
 
-    # Create symlink
+    # symlink
     ln -sf "$src" "$dest"
-    
-    # Verify if symlink was created correctly
+
     if [ -L "$dest" ]; then
-        echo "  Linked $src -> $dest"
+        echo "  Linked $src → $dest"
     else
-        echo "  ERROR: Failed to create symlink for $src"
+        echo "  ERROR: Failed to link $src"
     fi
 }
 
-# List of files to symlink
 FILES=(
-    "zsh/.zshrc"
-    "vim/.vimrc"
-    "i3/config"
-    "zathura/zathurarc"
+    "zsh/.zshrc .zshrc"
+    "vim/.vimrc .vimrc"
+    "i3/config .config/i3/config"
+    "zathura/zathurarc .config/zathura/zathurarc"
+    "kitty/kitty.conf .config/kitty/kitty.conf"
 )
 
-# Create symlinks
-for file in "${FILES[@]}"; do
-    link_file "$file"
+for entry in "${FILES[@]}"; do
+    link_file $entry
 done
 
 echo "Dotfiles installed!"

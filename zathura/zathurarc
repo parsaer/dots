@@ -1,7 +1,56 @@
-set recolor true
-set recolor-lightcolor "#222222"
-# set recolor-darkcolor "#FFFFFF"
+set pages-per-row 1
+
+set scroll-page-aware "true"
+
+# keybinding
+map r reload
+map p print
+map i recolor
+map z zoom out
+map x zoom in
+map R rotate
 
 
+# zoom
+set zoom-min 10
+set guioptions "si"
 
-map <C-i> recolor
+
+# color (gruvbox)
+set font "Inconsolata 15"
+set default-bg "#282828" #Background color (Gruvbox dark background)
+set default-fg "#EBDBB2" #Foreground color (light beige text)
+
+set statusbar-fg "#B8BB26" #04 (Gruvbox green for statusbar text)
+set statusbar-bg "#1D2021" #01 (Dark gray background for statusbar)
+
+set inputbar-bg "#3C3836" #00 (Dark gray for input bar background)
+set inputbar-fg "#EBDBB2" #02 (Light beige text for input bar)
+
+set notification-error-bg "#FB4934" #08 (Gruvbox red for errors)
+set notification-error-fg "#282828" #00 (Dark gray text for error notifications)
+
+set notification-warning-bg "#FABD2F" #08 (Gruvbox yellow for warnings)
+set notification-warning-fg "#282828" #00 (Dark gray text for warning notifications)
+
+set highlight-color "#FE8019" #0A (Gruvbox orange for highlighted text)
+set highlight-active-color "#83A598" #0D (Gruvbox light blue for active highlights)
+
+set completion-highlight-fg "#282828" #02 (Dark gray for completion highlight text)
+set completion-highlight-bg "#B8BB26" #0C (Gruvbox green for completion highlight background)
+
+set completion-bg "#3C3836" #02 (Dark gray for completion background)
+set completion-fg "#EBDBB2" #0C (Light beige text for completion)
+
+set notification-bg "#8EC07C" #0B (Gruvbox green for notification background)
+set notification-fg "#282828" #00 (Dark gray text for notifications)
+
+set recolor "true"
+set recolor-lightcolor "#282828" #00 (Dark background for recolor)
+set recolor-darkcolor "#EBDBB2" #06 (Light beige text for recolor)
+set recolor-reverse-video "true"
+set recolor-keephue "true"
+
+set selection-clipboard clipboard
+set render-loading "false"
+set scroll-step 50

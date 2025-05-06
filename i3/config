@@ -196,26 +196,19 @@ for_window [urgent="latest"] focus
 for_window [class="^.*"] border pixel 0
 gaps inner 8
 gaps outer 2
-gaps top -1
+gaps top -2
 ## class                border  backgr. text  indicator child_border
 client.focused_inactive #131416 #131416 #131416 #131416 #131416
 client.unfocused        #131416 #131416 #131416 #131416 #131416
 client.focused          #800080 #800080 #800080 #800080 #800080
 
-# persian keyboard support
 # exec --no-startup-id setxkbmap -model pc105 -layout "us,ir" -option "grp:alt_shift_toggle"
-
 # bindsym --release Mod1+Shift_L exec "setxkbmap -layout us"
 # bindsym --release Mod1+Shift_R exec "setxkbmap -layout ir"
 
 exec_always "setxkbmap -model pc104 -layout us,ir -variant ,, -option grp:alt_shift_toggle"
-exec --no-startup-id syncthing
-
-
-# todo...
-
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always feh --bg-fill $HOME/.wallpapers/dark-night.png
+exec_always feh --bg-fill $HOME/.wallpapers/ops.png
 exec_always --no-startup-id setxkbmap -option caps:super
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b

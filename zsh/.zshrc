@@ -23,12 +23,11 @@ alias sa="sudo apt"
 alias sag="sudo apt-get"
 alias wlist="nmcli device wifi list"
 alias wcon="nmcli device wifi connect"
-alias xvpn="expressvpn"
 alias ..="cd .."
-alias ll="ls -l"
+alias ll="ls -la"
 alias la="ls -A"
 alias cc="cd ~/code/"
-
+alias inv='vim $(fzf -m --preview="cat {}")'
 
 # vi mode
 autoload edit-command-line; zle -N edit-command-line
@@ -47,7 +46,6 @@ zinit light zsh-users/zsh-autosuggestions
 zinit ice depth=1
 zinit light jeffreytse/zsh-vi-mode # this shit is amazing
 
-
 ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
 
 
@@ -55,7 +53,8 @@ ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
 autoload -U compinit && compinit
 
 # keybinding for auto suggestion plugin
-bindkey '^f' autosuggest-accept
+# also <kj> + l 
+bindkey '^f' autosuggest-accept 
 
 # adding history 
 HISTSIZE=5000
