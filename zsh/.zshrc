@@ -6,6 +6,8 @@ eval "$(zoxide init zsh)"
 
 export PATH=$PATH:~/go/bin
 export PATH=$PATH:/home/par/clone/yazi/target/release
+# export EDITOR="nvim"
+# export VISUAL="nvim"
 
 # sys maintainence alias
 alias sdn="sudo shutdown now"
@@ -24,10 +26,11 @@ alias sag="sudo apt-get"
 alias wlist="nmcli device wifi list"
 alias wcon="nmcli device wifi connect"
 alias ..="cd .."
-alias ll="ls -la"
+alias ll="ls -laF"
 alias la="ls -A"
 alias cc="cd ~/code/"
 alias inv='vim $(fzf -m --preview="cat {}")'
+alias nvim='vim'
 
 # vi mode
 autoload edit-command-line; zle -N edit-command-line
@@ -57,7 +60,7 @@ autoload -U compinit && compinit
 bindkey '^f' autosuggest-accept 
 
 # adding history 
-HISTSIZE=5000
+HISTSIZE=10000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase

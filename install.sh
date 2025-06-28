@@ -42,6 +42,8 @@ FILES=(
     "i3/config .config/i3/config"
     "zathura/zathurarc .config/zathura/zathurarc"
     "kitty/kitty.conf .config/kitty/kitty.conf"
+    "mpv/mpv.conf .config/mpv/mpv.conf"
+    "mpv/input.conf .config/mpv/input.conf"
 )
 
 for entry in "${FILES[@]}"; do

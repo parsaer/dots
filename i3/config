@@ -209,6 +209,6 @@ client.focused          #800080 #800080 #800080 #800080 #800080
 exec_always "setxkbmap -model pc104 -layout us,ir -variant ,, -option grp:alt_shift_toggle"
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always feh --bg-fill $HOME/.wallpapers/ops.png
+exec_always feh --bg-fill $HOME/.wallpapers/sakura.png
 exec_always --no-startup-id setxkbmap -option caps:super
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b

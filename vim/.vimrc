@@ -5,7 +5,6 @@ Plug 'jacoborus/tender.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sainnhe/gruvbox-material'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 call plug#end()
 
@@ -87,3 +86,4 @@ augroup END
 
 " cpp code using g++
 autocmd FileType cpp nnoremap <f9> :w<CR>:!g++ % -o %< && ./%<<CR>
+autocmd FileType cpp nnoremap <f8> :w<CR>:!gcc % -o %< && ./%<<CR>
